@@ -3,7 +3,8 @@
 -- Add any additional keymaps here
 
 vim.keymap.set("n", "<leader>cqv", function()
-  local root = vim.fn.getcwd()
+  local root_file = vim.fn.findfile("requirements.txt", ".;")
+  local root = root_file ~= "" and vim.fn.fnamemodify(root_file, ':h') or vim.fn.getcwd()
 
   local cmd = table.concat({
     "cd " .. root,
