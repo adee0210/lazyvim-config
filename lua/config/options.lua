@@ -8,4 +8,5 @@ vim.opt.wrap = false -- hiển thị dòng văn bản như một dòng duy nhấ
 
 vim.opt.backup = false -- vô hiệu hóa việc tạo file sao lưu
 vim.opt.writebackup = false -- ngăn chặn việc chỉnh sửa các file đang được chỉnh sửa ở nơi khác
-vim.o.swapfile = false -- Tắt tính năng tạo file swap
+vim.opt.swapfile = false -- Tắt tính năng tạo file swap
+vim.opt.wrap = false -- hiển thị dòng văn bản như một dòng duy nhất
