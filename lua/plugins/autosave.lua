@@ -4,7 +4,7 @@ return {
   opts = {
     debounce_delay = 1000,
     trigger_events = {
-      defer_save = { "CursorHold" },
+      -- chỉ save khi rời buffer hoặc focus out
       immediate_save = { "FocusLost", "BufLeave" },
     },
     condition = function()
