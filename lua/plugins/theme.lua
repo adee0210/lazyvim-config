@@ -5,7 +5,9 @@ return {
     priority = 1000,
     config = function()
       require("onedark").setup({
-        style = "darker", -- dark | darker | cool | deep | warm | warmer
+        style = "warmer", -- dark | darker | cool | deep | warm | warmer
+        transparent = true,
+        term_colors = true,
       })
       require("onedark").load()
     end,
