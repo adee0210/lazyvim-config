@@ -4,7 +4,7 @@
 
 vim.keymap.set("n", "<leader>cqv", function()
   local root_file = vim.fn.findfile("requirements.txt", ".;")
-  local root = root_file ~= "" and vim.fn.fnamemodify(root_file, ':h') or vim.fn.getcwd()
+  local root = root_file ~= "" and vim.fn.fnamemodify(root_file, ":h") or vim.fn.getcwd()
 
   local cmd = table.concat({
     "cd " .. root,
@@ -15,12 +15,3 @@ vim.keymap.set("n", "<leader>cqv", function()
 
   vim.cmd("terminal " .. cmd)
 end, { desc = "Create .venv + install requirements (show output)" })
-
-vim.keymap.set("n", "<leader>rp", function()
-  if vim.bo.filetype ~= "python" then
-    print("Chỉ dùng cho file Python!")
-    return
-  end
-  vim.cmd("w")
-  vim.cmd("belowright term python %")
-end, { desc = "Run Python file in terminal" })
